@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic.edit import FormView
-from django.utils.importlib import import_module
+from importlib import import_module
 
 # import contact form class based on value in settings.py
 full_class = getattr(settings, 'CONTACT_FORM_CLASS', 'quix.django.contact.forms.ContactForm')
